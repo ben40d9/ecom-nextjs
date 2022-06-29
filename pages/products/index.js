@@ -1,9 +1,16 @@
 import Head from "next/head";
-import products from "../../assets/products.json";
 import SingleProduct from "../../components/SingleProduct";
 import styles from "../../styles/Product.module.css";
 
-export default function Product() {
+export async function getServerSideProps() {
+  const res = await fetch("http://localhost:3000/api/products");
+  const products = await res.json();
+  return {
+    props: { products },
+  };
+}
+
+export default function Product({ products }) {
   //console.log(products);
   return (
     <div className={styles.container}>
@@ -28,7 +35,7 @@ export default function Product() {
 
       <div
         id="snipcart"
-        data-api-key="MWMyNTRkNWItYjUzNS00MjYyLWFiMGMtNGEzNzg4ZGJlMWJkNjM3OTA2Nzg0NzAzMTg2NTY5"
+        data-api-key={process.env.SNIPCART_API_KEY}
         hidden
       ></div>
       <script
