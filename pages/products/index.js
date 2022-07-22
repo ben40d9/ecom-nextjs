@@ -29,7 +29,7 @@ export default function Product({ products }) {
       </Head>
 
       <main className={styles.main}>
-        <h1>E-Commerse in Next.js and SnipCard</h1>
+        <h1 class = "bg-red-500">E-Commerse in Next.js and SnipCard</h1>
 
         <div className={styles.grid}>
           {products.map((product, i) => {
