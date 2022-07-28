@@ -8,6 +8,7 @@ import {
   ButtonGroup,
   Grid,
   GridItem,
+  Stack,
 } from "@chakra-ui/react";
 
 export default function Home() {
@@ -18,10 +19,10 @@ export default function Home() {
                   "nav nav"
                   "main lain"
                   "footer footer"`}
-      gridTemplateRows={"50px 400px 250px 400px 50px"}
+      gridTemplateRows={"50px 300px 150px 200px 50px"}
       gridTemplateColumns={"150px 1"}
       h="800px"
-      gap="1"
+      gap="2"
       color="blackAlpha.700"
       fontWeight="bold"
     >
@@ -50,9 +51,18 @@ export default function Home() {
       </GridItem>
       <GridItem pl="2" bg="pink.300" area={"nav"}>
         <Flex justifyContent={"center"} alignItems={"center"}>
-          <Box p={"2"}>wallet</Box>
-          <Box p={"2"}>cup</Box>
-          <Box p={"2"}>tshirt</Box>
+          <Box p={"2"} borderWidth="1px" w="70px" bg="yellow">
+            wallet
+          </Box>
+          <Spacer />
+          <Box p={"2"} borderWidth="1px" w="70px" bg="red">
+            cup
+          </Box>
+          <Spacer />
+          <Box p={"2"} borderWidth="1px" w="70px" bg="green">
+            tshirt
+          </Box>
+          <Spacer />
         </Flex>
       </GridItem>
       <GridItem pl="2" bg="green.300" area={"main"}>
@@ -62,7 +72,14 @@ export default function Home() {
         div_box#2
       </GridItem>
       <GridItem pl="2" bg="blue.300" area={"footer"}>
-        Footer
+        <Stack direction="row" spacing={4}>
+          <Button colorScheme="teal" variant="solid">
+            Email
+          </Button>
+          <Button colorScheme="teal" variant="outline">
+            Call us
+          </Button>
+        </Stack>
       </GridItem>
     </Grid>
   );
