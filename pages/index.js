@@ -13,17 +13,15 @@ import {
 export default function Home() {
   return (
     <Grid
-      templateAreas={`
-        "header header"
-        "hero hero"
-        "nav nav"
-        "main lain"
-        "footer footer"
-      `}
-      gridTemplateRows={"50px 1fr 90px 70px 50px"}
+      templateAreas={`"header header"
+                  "hero hero"
+                  "nav nav"
+                  "main lain"
+                  "footer footer"`}
+      gridTemplateRows={"50px 400px 250px 400px 50px"}
       gridTemplateColumns={"150px 1"}
       h="800px"
-      gap="2"
+      gap="1"
       color="blackAlpha.700"
       fontWeight="bold"
     >
