@@ -1,5 +1,5 @@
 import Head from "next/head";
-import SingleProduct from "../../components/SingleProduct";
+import SingleProduct from "../../components/ui/SingleProduct";
 import styles from "../../styles/Product.module.css";
 
 const baseURL =
